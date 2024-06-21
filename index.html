@@ -2,6 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png"" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -14,33 +19,88 @@
   </head>
   <body class="page">
     <header class="header">
-      <nav class="theme-menu header__theme-menu">
-        <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
-        <ul class="theme-menu__list">
-          <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
-              Темно
-            </button>
-          </li>
-          <li class="theme-menu__item">
-            <button
-              type="button"
-              data-theme="auto"
-              disabled
-              class="theme-menu__button"
-            >
-              Авто
-            </button>
-          </li>
-          <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
-              Светло
-            </button>
-          </li>
-        </ul>
-      </nav>
+      <div class="rectangle">
+        <div class="logo-group">
+          <h1 class="header_title">&lt;/html&gt;</h1>
+          <p>закрывающий тег</p>
+        </div>
+        <nav class="theme-menu header__theme-menu">
+          <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
+          <ul class="theme-menu__list">
+            <li class="theme-menu__item">
+              <button
+                type="button"
+                data-theme="dark"
+                class="theme-menu__button"
+              >
+                Темно
+              </button>
+            </li>
+            <li class="theme-menu__item">
+              <button
+                type="button"
+                data-theme="auto"
+                disabled
+                class="theme-menu__button"
+              >
+                Авто
+              </button>
+            </li>
+            <li class="theme-menu__item">
+              <button
+                type="button"
+                data-theme="light"
+                class="theme-menu__button"
+              >
+                Светло
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main></main>
+    <main class="main">
+      <article class="card">
+        <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+        <div class="card__content">
+          <div class="wrapper">    
+   
+          <img
+            loading="lazy"
+            class="picture"
+            src="./images/image_start.png"
+            alt="Белый трейлер в сиреневом сумраке"
+          />
+    <p class="image__label"> &lt;/html&gt;</p>
+         </div>  
+<div class="card__text">
+        <p>Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+       <p>Место для ваших воспоминаний о начале обучения.</p>
+       <div class="button__like">
+       <button type="button" class="card__icon-button">
+         <img src="./images/heart.png" alt="Иконка лайка" /></button> 
+        <button class="card__like-button">
+        <span class="button__text">Like</span> 
+      </button>
+      </div></div></div>
+      </article>
+    </main>
+    <footer class="footer">
+   
+      <button type="button" class="footer-menu__button">
+         <svg class="floppy" viewBox="0 0 29 28" width="29" height="28">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+       
+     
+    
+        <span class="button__footer__text">Сохранить на память</span>  
+      </button>
+     
+      
+      
+     
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
