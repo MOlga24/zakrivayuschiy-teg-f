@@ -23,7 +23,7 @@
   /* margin: 0 auto; */
 
   font-family: var(--main-font, sans-serif);
-  font-variation-settings: "wght" var(--main-font-title-weight), "wdth" 100,
+  font-variation-settings: "wght" var(--main-font-card-weight), "wdth" 100,
     "opsz" 0;
   background-color: var(--bg-color);
   color: var(--main-color);
@@ -34,7 +34,7 @@
   background-attachment: fixed;
 }
 
-.header { 
+.header {
   margin: 0 auto;
   display: grid;
   padding: 0;
@@ -122,7 +122,6 @@
   animation-direction: alternate;
 }
 
-
 .theme-menu__button:hover {
   color: var(--main-color);
   opacity: 0.6;
@@ -149,47 +148,50 @@
   width: 100%;
   transform-origin: left;
 }
-.main {margin: 0 auto;
+.main {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 54px;
   font-family: var(--main-font);
   font-size: 18px;
- width: var(--main-width);
+  width: var(--main-width);
 }
-.card { 
+.card {
   /* outline: 2px solid var(--main-color); */
   /* outline-offset: -2px; */
   /* overflow-x: hidden; */
   background-color: var(--bg-color);
   display: flex;
-  flex-direction: column;gap:2px;
-  
+  flex-direction: column;
+  gap: 2px;
+  font-weight: var(--main-font-card-weight);
 }
 .card__content {
-  font-weight: 400;
   display: flex;
   flex-direction: column;
   /* gap:2px; */
   outline: 2px solid var(--main-color);
 }
 .card__title {
-  padding:4px 10px;
+  padding: 4px 10px;
   outline: 2px solid var(--main-color);
   font-weight: var(--main-font-title-weight);
+  font-variation-settings: "wght" var(--main-font-title-weight), "wdth" 100,
+    "opsz" 0;
   font-size: 18px;
   line-height: 1.3;
 }
 .card__text {
+  font-weight: inherit;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   gap: 27px;
   padding: 25px 25px 22px 26px;
-  font-weight:var(--main-font-card-weight);
 }
 .card__text:last-child {
-  gap:26px;
+  gap: 26px;
 }
 .picture {
   display: block;
@@ -198,15 +200,12 @@
   inline-size: 100%;
   block-size: auto;
 
- position: center;
-  size: cover;
-
+  /* position: center;
+  size: cover; */
 }
 .wrapper {
   z-index: 2;
   position: relative;
- 
-
 }
 .image__label {
   position: absolute;
@@ -217,18 +216,14 @@
   mix-blend-mode: hard-light;
   text-transform: uppercase;
   font-family: var(--accent-font);
-  font-weight:var(--main-font-title-weight);
+  font-weight: var(--main-font-title-weight);
   color: var(--main-color);
   opacity: 0.5;
   font-size: 14px;
-  
 }
-@supports (
-  (text-stroke: 1px var(--stroke-color)) or
-    (-webkit-text-stroke: 1px var(--stroke-color))
-) {
+@supports (-webkit-text-stroke: 1px var(--stroke-color)) {
   .image__label {
-    -webkit-text-stroke:1px var(--stroke-color);
+    -webkit-text-stroke: 1px var(--stroke-color);
     /* text-stroke: 1px var(--stroke-color); */
     text-shadow: none;
   }
@@ -239,7 +234,7 @@
   gap: 4px;
   align-self: flex-end;
   outline: none;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   height: fit-content;
 }
 .card__icon-button {
@@ -262,64 +257,36 @@
   fill: transparent;
   transition: fill 0.3s;
 }
-.card__icon-button:hover {
-  .core {
-    transition: fill 0.3s;
-    fill: var(--main-color);
-  }
-  .main-body {
-    transition: fill 0.3s 0.05s;
-    fill: var(--main-color);
-  }
+.card__icon-button:hover .core {
+  transition: fill 0.3s;
+  fill: var(--main-color);
+}
+.card__icon-button:hover .main-body {
+  transition: fill 0.3s 0.05s;
+  fill: var(--main-color);
 }
 
-.card__icon-button:active {
-  .core {
-    transition: fill 0.3s;
-    fill: var(--sparks);
-  }
-  .main-body {
-    transition: fill 0.3s 0.05s;
-    fill: var(--sparks);
-  }
-}
 .like-icon {
-  width:39px;
+  width: 39px;
   height: 36px;
 }
-.like-icon.is-liked {
- 
-  .core {
-    transition: fill 0.3s;
-    fill: var(--sparks);
-  }
-  .main-body {
-    transition: fill 0.3s 0.05s;
-    fill: var(--sparks);
-  }
-  .contour {
-    transition: fill 0.3s 0.06s;
-    fill: var(--sparks);
-  }
+.like-icon.is-liked .core {
+  transition: fill 0.3s;
+  fill: var(--sparks);
 }
-/* .like-icon.is-liked .heart {
-  transform: scale(1.0);
-} */
-.like-icon.is-liked .heart {
-  animation: increase 0.3s ease-in 0.1s reverse;
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s 0.05s;
+  fill: var(--sparks);
 }
-
-
-.like-icon.is-liked {
-  .sparks {
-    animation: sparking 0.3s 0.3s ease-in alternate;
-  }
+.like-icon.is-liked .contour {
+  transition: fill 0.3s 0.06s;
+  fill: var(--sparks);
 }
 
 .card__like-button {
-outline: 2px solid var(--main-color);
-outline-offset: -3px;
-border: none;
+  outline: 2px solid var(--main-color);
+  /* outline-offset: -2px; */
+  border: none;
   z-index: 2;
   font-family: var(--accent-font, sans-serif);
   font-size: 14px;
@@ -327,7 +294,7 @@ border: none;
   position: relative;
   overflow-x: hidden;
   background-color: var(--main-color);
-  color: var(---bg-color-theme);
+  color: var(--bg-color-theme);
   cursor: pointer;
   min-width: 130px;
   padding: 0px 20px;
@@ -350,27 +317,23 @@ border: none;
   outline: none;
   padding: 0;
   margin: 0;
-
 }
 
-.card__like-button:hover {
-
-
- .shtorka { 
-    animation: filling 0.5s linear infinite alternate;
-  } 
-  .button__text {
-    color: var(--main-color-theme);
-    mix-blend-mode: difference;
-  }
+.card__like-button:hover .shtorka {
+  animation: filling 0.5s linear infinite alternate;
 }
+.card__like-button:hover .button__text {
+  color: var(--main-color-theme);
+  mix-blend-mode: difference;
+}
+
 .button__text {
   color: var(--main-color);
   mix-blend-mode: normal;
- 
 }
 .button__text:hover {
-  border: none;outline: none;
+  border: none;
+  outline: none;
 }
 
 .card__like-button:focus-visible {
@@ -379,8 +342,8 @@ border: none;
 
 .footer {
   padding-top: 54px;
-position: relative;
- z-index: 1;
+  position: relative;
+  z-index: 1;
   min-height: 236px;
   height: 100%;
   color: var(--main-color);
@@ -389,18 +352,26 @@ position: relative;
   justify-content: center;
 }
 .footer .card__like-button {
-  padding: 15px 20px; 
+  padding: 15px 20px;
   line-height: 1;
   gap: 8px;
+ 
 }
-
+/* .footer .card__like-button:focus-visible {
+  outline: none;
+} */
 .button-save {
- overflow-x: hidden;
+  /* background-color: transparent; */
+border: none;
+margin: 0;
+padding: 0;
+  /* display: flex; */
+  /* overflow-x: hidden; */
   height: fit-content;
-  /* gap: 10px; */
-  border: 2px solid var(--main-color);
-}
+  width: auto;
 
+
+}
 
 dialog {
   text-transform: uppercase;
@@ -424,10 +395,10 @@ dialog[open] {
   flex-direction: row;
   align-items: center;
   position: fixed;
- top: 50vh;
-  left: 50vw; 
- transform: translate(-50%, -50%);
-  margin:0;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  margin: 0;
   justify-content: center;
   padding: 0;
 }
@@ -456,10 +427,7 @@ dialog::backdrop {
   flex-direction: column;
   gap: 30px;
   align-items: center;
-
-
   padding: 30px 42px;
-  
 }
 
 .dialog__text {
@@ -471,23 +439,26 @@ dialog::backdrop {
   line-height: 1.5;
 }
 
-.button-save:hover {
-   .shtorka {
-    animation: filling 0.5s linear infinite alternate;
-  }
-  .button__text {
-    color: var(--main-color-theme);
-    mix-blend-mode: difference;
-    margin: 0;
-    padding: 0;
-  }
-
-  .floppy {
-    mix-blend-mode: difference;
-    color: var(--main-color-theme);
-  }
+.button-save:hover .shtorka {
+  animation: filling 0.5s linear infinite alternate;
+}
+.button-save:hover .button__text {
+  color: var(--main-color-theme);
+  mix-blend-mode: difference;
+  margin: 0;
+  padding: 0;
+}
+.button-save:hover .floppy {
+  mix-blend-mode: difference;
+  color: var(--main-color-theme);
+}
+.button-save:focus-visible {
+  box-shadow: 3px 3px 0 var(--main-color);
 }
 
+.button-save:focus {
+outline: none;
+}
 .floppy {
   width: clamp(1.75rem, 1.904rem + -0.657vw, 1.313rem);
   height: clamp(1.75rem, 1.904rem + -0.657vw, 1.313rem);
@@ -496,4 +467,31 @@ dialog::backdrop {
 .sparks {
   opacity: 0;
 }
+.filter__bright {
+  filter: brightness(300%);
 
+}
+.filter__blur{
+  filter: blur(3.2rem);
+} 
+.filter__gray {
+  
+    filter: grayscale(0.8);
+
+}
+.filter__saturate {
+  filter: saturate(158%);
+}
+.filter__hue {
+  filter: hue-rotate(-90deg);
+}
+.filter__sepia {
+  
+    filter: sepia(80%);
+}
+.filter__invert {
+  filter: invert(0.7);
+}
+.filter__drop-shadow{
+  filter: drop-shadow(5px 15px 3px rgba(0, 0, 0, 0.8));
+}

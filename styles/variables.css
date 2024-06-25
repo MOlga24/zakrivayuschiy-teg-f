@@ -5,39 +5,34 @@
   --main-font-card-weight: 400;
   --main-font-title-weight: 700;
   --bg-color: #ffffff;
-  --main-color-theme:#FFFFFF;
+  --main-color-theme: #ffffff;
   --main-color: #000000;
   --bg-image: repeating-linear-gradient(90deg, #d3d3d3, transparent 2px),
     repeating-linear-gradient(transparent, #d3d3d3 2px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-    inline-size: 25%;
-    block-size: 50%;
+  inline-size: 25%;
+  block-size: 50%;
   --stroke-color: rgba(255, 255, 255, 0.5);
   --sparks: red;
-  --main-width:clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
-
+  --main-width: clamp(23.188rem, 16.035rem + 30.516vw, 43.5rem);
 }
 @media (width>375px) {
-   
-  
-    .footer .card__like-button {
-      flex-direction: row;
-     
-    }
-    /* .floppy {
+  .footer .card__like-button {
+    flex-direction: row;
+  }
+  .floppy {
       width: 22px;
       height: 22px;
-    } */
-    .dialog__content {
-      padding: 30px;
     }
-    dialog { 
-      transform: translate(-100%, -100%);
-      .floppy {
-        width: 39px;
-        height: 39px;
-      }
-     
-    }
+  .dialog__content {
+    padding: 30px;
   }
-  
+  dialog {
+    transform: translate(-100%, -100%);
+   
+    } 
+    dialog.floppy {
+      width: 39px;
+      height: 39px;
+  }
+}
