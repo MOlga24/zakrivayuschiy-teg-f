@@ -105,7 +105,6 @@
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1;
-  position: relative;
 }
 .theme-menu__button:disabled {
   color: var(--main-color);
@@ -355,22 +354,19 @@
   padding: 15px 20px;
   line-height: 1;
   gap: 8px;
- 
 }
 /* .footer .card__like-button:focus-visible {
   outline: none;
 } */
 .button-save {
   /* background-color: transparent; */
-border: none;
-margin: 0;
-padding: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
   /* display: flex; */
   /* overflow-x: hidden; */
   height: fit-content;
   width: auto;
-
-
 }
 
 dialog {
@@ -383,7 +379,7 @@ dialog {
   font-size: 14px;
   line-height: 1.1;
   border: none;
-  padding: 0;
+
   max-width: 357px;
 }
 dialog:not([open]) {
@@ -407,7 +403,6 @@ dialog::backdrop {
 }
 
 .button__close {
-  outline: none;
   text-transform: uppercase;
   background-color: inherit;
   outline: 2px solid var(--main-color);
@@ -457,7 +452,7 @@ dialog::backdrop {
 }
 
 .button-save:focus {
-outline: none;
+  outline: none;
 }
 .floppy {
   width: clamp(1.75rem, 1.904rem + -0.657vw, 1.313rem);
@@ -469,15 +464,12 @@ outline: none;
 }
 .filter__bright {
   filter: brightness(300%);
-
 }
-.filter__blur{
+.filter__blur {
   filter: blur(3.2rem);
-} 
+}
 .filter__gray {
-  
-    filter: grayscale(0.8);
-
+  filter: grayscale(0.8);
 }
 .filter__saturate {
   filter: saturate(158%);
@@ -486,12 +478,11 @@ outline: none;
   filter: hue-rotate(-90deg);
 }
 .filter__sepia {
-  
-    filter: sepia(80%);
+  filter: sepia(80%);
 }
 .filter__invert {
   filter: invert(0.7);
 }
-.filter__drop-shadow{
+.filter__drop-shadow {
   filter: drop-shadow(5px 15px 3px rgba(0, 0, 0, 0.8));
 }
