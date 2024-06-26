@@ -6,8 +6,19 @@
   --bg-color: #ffffff;
   --main-color-theme: #ffffff;
   --main-color: #000000;
-  --bg-image: repeating-linear-gradient(90deg, #d3d3d3 2px, transparent 2px),
-    repeating-linear-gradient(transparent 2px, #d3d3d3 2px),
+  --bg-image: repeating-linear-gradient(
+      -90deg,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
   inline-size: 25%;
   block-size: 50%;
