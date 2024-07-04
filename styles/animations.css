@@ -6,26 +6,22 @@
     transform: translate(4px, 0px);
   }
 }
+
+.like-icon.is-liked .heart {
+  animation: increase 0.3s ease-in 0.1s reverse;
+  transform-origin: center center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparking 0.3s 0.3s ease-in alternate;
+}
 @keyframes sparking {
   100% {
     opacity: 1;
   }
 }
-
 @keyframes increase {
   100% {
-    scale: 1.1;
+    transform: scale(1.5);
   }
-}
-@keyframes filling {
-  100% {
-    transform: translateX(100%);
-  }
-}
-.like-icon.is-liked .heart {
-  animation: increase 0.3s ease-in 0.1s reverse;
-}
-
-.like-icon.is-liked .sparks {
-  animation: sparking 0.3s 0.3s ease-in alternate;
 }

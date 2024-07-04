@@ -20,17 +20,38 @@
       transparent 4px
     ),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  inline-size: 25%;
-  block-size: 50%;
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --sparks: red;
+  --sparks: #ff0000;
   --main-width: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
+}
+@media (width=375px) {
+  .button-save .floppy {
+    width: 28px;
+    height: 28px;
+  }
 }
 @media (width<375px) {
   :root {
-    --main-width: clamp(19.75rem, -0.25rem + 100vw, 23.125rem);
+    --main-width: clamp(18.125rem, 7.014rem + 55.556vw, 20rem);
   }
-  .page {
-    width: var(--main-width);
+  .main,
+  .rectangle,
+  .button-save {
+    width: clamp(18.125rem, 7.014rem + 55.556vw, 20rem);
+  }
+
+  .logo-group .header__logo {
+    font-size: clamp(2.1875rem, -2.9034rem + 25.4545vw, 3.0625rem);
+  }
+  .page .button-save {
+    width: clamp(18.125rem, 7.014rem + 55.556vw, 20rem);
+  }
+  dialog {
+    width: 290px;
+  }
+  dialog .dialog__content {
+    padding: 30px 10px;
+
+    width: clamp(18.125rem, 7.014rem + 55.556vw, 20rem);
   }
 }
