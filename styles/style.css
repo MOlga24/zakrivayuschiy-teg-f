@@ -424,7 +424,7 @@ dialog::backdrop {
   align-self: center;
   overflow-x: hidden;
   color: var(--main-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--accent-font, fantasy);
   display: flex;
   justify-content: center;
   text-transform: uppercase;
